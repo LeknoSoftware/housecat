@@ -1,7 +1,5 @@
-import startServer from "start"
+import runServer from "./lib/runServer.js";
+import {Server} from "./lib/serverClass.js";
+import {getDetails} from "./lib/utils.js"
 
-args = process.argv;
-let file = args[1];
-let PORT = 5000;
-
-startServer(file, PORT);
+export {runServer, Server, getDetails};
