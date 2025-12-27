@@ -15,5 +15,9 @@
   "version": "1.0.0",
   "description": "A live web server for development",
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "eslint": "^9.39.2"
+  }
 }
