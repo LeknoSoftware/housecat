@@ -14,8 +14,10 @@ function getDetails(Server, args){
         let msg = chalk.yellow("Trying to start server at port 3000....");
         console.log(msg);	
     }
-    else{
+    else{    
         Server.PORT = args[3];
+        let msg = chalk.yellow(`Trying to start server at port ${Server.PORT}`);
+        console.log(msg);    
     }		
 }		
 

@@ -1,9 +1,34 @@
-import {Server, runServer, getDetails} from "./index.js";
+import chokidar from "chokidar";
+import chalk from "chalk";
+
+import {Server, getDetails} from "./index.js";
 
 function run(args){
     const server = new Server();	
     getDetails(server, args);
-    runServer(server.file, server.PORT);
-}	
+    server.run();
+    // Rerun the server each time any change takes place	
+    chokidar.watch('.', {
+        ignoreInitial: true,
+    }).on('all', () => {
+        server.close();	
+        rerun(server);
+        return;
+    });	
+}
+
+function rerun(server){
+    const msg = chalk.yellow(`Trying to restart server at port ${server.PORT}....`);
+    console.log(msg);	
+    server.rerun();
+    // Rerun the server each time any change takes place	
+    chokidar.watch('.', {
+        ignoreInitial: true,
+    }).on('all', () => {
+        server.close();	
+        rerun(server);
+        return;
+    });
+}
 
 export default run;

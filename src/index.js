@@ -1,5 +1,4 @@
-import runServer from "./lib/runServer.js";
-import {Server} from "./lib/serverClass.js";
+import Server from "./lib/server.js";
 import {getDetails} from "./lib/utils.js"
 
-export {runServer, Server, getDetails};
+export {Server, getDetails};
