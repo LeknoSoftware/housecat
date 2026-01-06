@@ -19,7 +19,7 @@
     "server"
   ],
   "bin": {
-    "hc": "bin/index.js"
+    "housecat": "bin/index.js"
   },
   "type": "module",
   "version": "1.0.0",

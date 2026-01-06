@@ -1,9 +1,9 @@
 Usage:
 
-hc <abc> ....................... load the file <abc> on port 3000(default)
-hc <abc> <port> ................ load the file <abc> on port <port>
+housecat <abc> ....................... load the file <abc> on port 3000(default)
+housecat <abc> <port> ................ load the file <abc> on port <port>
 
 Examples:
-$ hc index.html 
-$ hc index.html 5000
+$ housecat index.html 
+$ housecat index.html 5000
      
