@@ -1,14 +1,19 @@
 # Live Dev Server
 Live server for developing web software. 
-Built using *node.js*.
+Built using *Node.js*.
 
 ## Why?
-Live Dev Server is developed with the aim of it being a server for web development.
-It reloads the webpage everytime any change occurs in the directory.  
+**Live Dev Server** is developed with the aim of it being a server for web development.
+It reloads the webpage each time any change occurs in the directory.  
 It provides a command line tool named `live`.
 
 ## Installation
-Using CLI:
+**Using npm**(recommended):
+- Run this command in the terminal
+```sh
+npm install -g live-dev-server
+```
+**From GitHub**:
 - Run this command
 ```sh
 git clone https://github.com/LeknoSoftware/Live-Dev-Server.git
@@ -25,7 +30,7 @@ npm install -g
 Live Dev Server provides a command line tool named `live`.   
 
 Navigate to your project directory.  
-To run a file `path/to/index.html`, just run the command:
+To run a file, say `path/to/index.html`, just run the command:
 ```sh
 live path/to/index.html
 ```
@@ -48,4 +53,4 @@ localhost: 3000
 That's it! All your changes will get reflected without manual reloading.
 
 ## LICENSE
-This project is MIT licensed. See, the [LICENSE](LICENSE) file. 
+This project is MIT licensed. See the [LICENSE](LICENSE) file.
