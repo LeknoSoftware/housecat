@@ -11,7 +11,7 @@
     "cli"
   ],
   "bin": {
-    "lds": "bin/index.js"
+    "live": "bin/index.js"
   },
   "type": "module",
   "version": "1.0.0",
