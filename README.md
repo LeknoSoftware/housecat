@@ -34,8 +34,9 @@ To run a file, say `path/to/index.html`, just run the command:
 ```sh
 housecat path/to/index.html
 ```
-By default port *3000* is used.  
+**Note**: Only files in the current directory can be run using housecat. 
 
+By default port *3000* is used.   
 To use any other port, say *5000* for the file `path/to/index.html`, just run:
 ```sh
 housecat path/to/index.html 5000
@@ -48,11 +49,12 @@ housecat --help
 Open the specified port in your browser.  
 For example, if the port is *3000*, then type in your browser:
 ```
-localhost: 3000
+localhost:3000
 ```
 That's it! All your changes will get reflected without manual reloading.
 
 ## LICENSE
 This project is MIT licensed. See the [LICENSE](LICENSE) file.
+
 
 
