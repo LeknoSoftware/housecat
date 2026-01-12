@@ -19,7 +19,7 @@ class Server{
     run(){
         const __dirname = process.cwd();
         const __present_dirname = import.meta.dirname;
-	let filePath = path.join(__dirname, this.file);    
+        let filePath = path.join(__dirname, this.file);
         if(! fs.existsSync(filePath)){
             throw new CannotFindFileError(`Cannot find the file in ${filePath}`);
         }
