@@ -19,14 +19,17 @@ class Server{
     run(){
         const __dirname = process.cwd();
         const __present_dirname = import.meta.dirname;
-        let filePath = path.join(__dirname, this.file);
-        if(! fs.existsSync(filePath)){
+		let initialPath = path.join(__dirname, this.file);  
+        if(! fs.existsSync(initialPath)){
             throw new CannotFindFileError(`Cannot find the file in ${filePath}`);
         }
-        Server.app.get(`/${path.join(this.file)}`, (req, res) => {
+
+		let socket = readDoc(path.join(__present_dirname, "/../assets/socket.html"));
+
+        Server.app.get("/{*splat}.html", (req, res) => {
+			let filePath = path.join(__dirname, req.path);
             let content = raceRead(filePath);
-            let additional = readDoc(path.join(__present_dirname, "/../assets/socket.html"));
-            content  = content + additional;
+            content  = content + socket;
             res.send(content);
         });
         Server.app.get("/", (req, res) => {
@@ -35,7 +38,7 @@ class Server{
         Server.app.use(express.static(__dirname, {index: this.file}));
         Server.listener = Server.app.listen(this.PORT, (error) => {
             if(! error){
-                const msg = chalk.green(`Started live dev server at port ${this.PORT}.`);
+                const msg = chalk.green(`Started housecat at port ${this.PORT}.`);
                 console.log(msg);
             }
             else{
