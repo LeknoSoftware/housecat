@@ -47,7 +47,7 @@ class Server{
         });
     }
 
-    close(){
+    static close(){
         Server.listener.close();
     }
 }

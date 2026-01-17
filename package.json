@@ -3,7 +3,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LeknoSoftware/housecat.git"
-  },  
+  },
   "main": "bin/index.js",
   "dependencies": {
     "chalk": "^5.6.2",
@@ -12,13 +12,13 @@
     "ws": "^8.18.3"
   },
   "keywords": [
-	"live-server",
-	"live-dev-server",
+    "live-server",
+    "live-dev-server",
     "reload",
     "live",
     "server",
-	"cli",
-	"web-dev"
+    "cli",
+    "web-dev"
   ],
   "bin": {
     "housecat": "bin/index.js"
@@ -30,6 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.6.1",
-    "eslint": "^9.39.2"
+    "eslint": "^9.39.2",
+    "supertest": "^7.2.2"
   }
 }
