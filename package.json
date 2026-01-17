@@ -12,17 +12,19 @@
     "ws": "^8.18.3"
   },
   "keywords": [
-    "cli",
+	"live-server",
+	"live-dev-server",
     "reload",
-    "web",
     "live",
-    "server"
+    "server",
+	"cli",
+	"web-dev"
   ],
   "bin": {
     "housecat": "bin/index.js"
   },
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A live web server for development",
   "author": "Lekno Software",
   "license": "MIT",
